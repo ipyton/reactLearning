@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- get a container-->
+    <div id="test"></div>
+    
+    <!--import core component-->
+    <script type="text/javascript" src="./js/react.development.js"></script>
+
+    <!--import react dom-->
+    <script type="text/javascript" src="./js/react-dom.development.js"></script>
+    <!--import babel to transform jsx syntax to js-->
+    <script type="text/javascript" src="./js/babel.min.js"></script>
+
+    <script type="text/babel">
+        const VDOM = <h1>hello world!!</h1>
+        ReactDOM.render(VDOM, document.getElementById('test'))
+    </script>
+</body>
+</html>
