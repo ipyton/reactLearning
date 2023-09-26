@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 准备好一个“容器” -->
+	<div id="test"></div>
+	
+	<!-- 引入react核心库 -->
+	<script type="text/javascript" src="../js/react.development.js"></script>
+	<!-- 引入react-dom，用于支持react操作DOM -->
+	<script type="text/javascript" src="../js/react-dom.development.js"></script>
+	<!-- 引入babel，用于将jsx转为js -->
+	<script type="text/javascript" src="../js/babel.min.js"></script>
+
+    <script type="text/babel">
+        class Weather extends React.Component{
+            constructor(props) {
+                super(props)
+                this.state = {isHot: false, wind:'breeze'}
+                // this one is used to change the this in changeWrather.
+                this.changeWeather = this.changeWeather.bind(this)
+            }
+
+            //call n + 1 times.
+            render(){
+                console.log('render')
+                const {isHot, wind} = this.state
+                return <h1 onClick={this.changeWeather}> Weather today is {isHot ? 'hot' : 'cool'}</h1> 
+            }
+
+            //call n + 1 times
+            changeWeather(){
+                console.log(this)
+                console.log('changeWeather');
+				const isHot = this.state.isHot
+				this.setState({isHot:!isHot})
+				console.log(this);
+            }
+
+        }
+
+        ReactDOM.render(<Weather/>, document.getElementById('test'))
+    </script>
+
+</body>
+</html>
