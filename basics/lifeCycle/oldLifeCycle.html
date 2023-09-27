@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test"></div>
+	
+	<script type="text/javascript" src="../js/react.development.js"></script>
+	<script type="text/javascript" src="../js/react-dom.development.js"></script>
+	<script type="text/javascript" src="../js/babel.min.js"></script>
+
+    <script type="text/babel">
+        /**
+         * 1.initialize:1)constructor 2)component will mount 3) render 4) component did amount.  
+         * 2.update:1)shouldComponentUpdate() 2) componentWillUpdate() 3)render() 4)componentDidUpdate()
+         * 3.unmount:1)componentWillUnmount()
+         */
+        class Count extends React.Component{
+            constructor(props) {
+                console.log()
+                super(props)
+                this.state = {count: 0}
+            }
+
+
+            render(){
+                console.log("render")
+                const {count} = state
+                return (
+                    <div>
+                        <h2>sum is {count}</h2>
+                        <button onClick={this.add}>点我+1</button>
+						<button onClick={this.death}>卸载组件</button>
+						<button onClick={this.force}>不更改任何状态中的数据，强制更新一下</button>
+                        </div>
+                )
+
+
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
