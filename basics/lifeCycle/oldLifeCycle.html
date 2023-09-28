@@ -25,6 +25,52 @@
                 this.state = {count: 0}
             }
 
+            add = () => {
+                const {count} = this.state
+                this.setState({count: count + 1})
+            } 
+
+            death = () => {
+                ReactDOM.unmountComponentAtNode(document.getElementById('test'))
+            }
+
+            
+            force = () => {
+                // used without asking should component update method.
+                this.forceUpdate()
+            }
+
+            // before the component is loaded
+            componentWillMount() {
+                console.log('component will mount')
+            }
+
+            // execute after been loaded
+            componentDidMount(){
+                console.log('component has been mounted')
+            }
+
+            // just before the component is unmounted.
+            componentWillUnmount(){
+                console.log("count -- component will unmount")
+            }
+
+            //the valve of whether the component should be updated. return a boolean value.
+            shouldComponentUpdate(){
+				console.log('Count---shouldComponentUpdate');
+				return true
+			}
+
+			//just before component is updated
+			componentWillUpdate(){
+				console.log('Count---componentWillUpdate');
+			}
+
+			// after the component is updated.
+			componentDidUpdate(){
+				console.log('Count---componentDidUpdate');
+			}
+
 
             render(){
                 console.log("render")
