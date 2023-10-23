@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { Link, Route } from "react-router-dom/cjs/react-router-dom.min";
-import Home from './components/Home';
-import About from "./components/About";
+import Home from '../basic-route/components/Home';
+import About from "../basic-route/components/About";
 
 
 export default class App extends Component {
