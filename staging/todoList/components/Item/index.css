@@ -8,15 +8,15 @@ li {
   }
   
   li label {
-    float: left;
-    cursor: pointer;
+    float:none;
+    cursor:pointer;
   }
   
   li label li input {
     vertical-align: middle;
     margin-right: 6px;
-    position: relative;
-    top: -1px;
+    position:absolute;
+    top: -10px;
   }
   
   li button {
