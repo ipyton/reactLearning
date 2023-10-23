@@ -1,0 +1,1 @@
+style will lose when we use route, so absolute path for css file is need or using PUBLIC_URL% as a prefix.
