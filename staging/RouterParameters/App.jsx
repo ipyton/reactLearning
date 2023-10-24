@@ -26,8 +26,8 @@ export default class App extends Component {
                 <div className="col-xs-6">
                     <div className="panel">
                         <Switch>
-                            <Route path="/about" component={About}></Route>
-                            <Route path="/home" component={Home}></Route>
+                            <Route replace path="/about" component={About}></Route>
+                            <Route replace path="/home" component={Home}></Route>
                             <Redirect to="/about"></Redirect>
                         </Switch>
                     </div>
